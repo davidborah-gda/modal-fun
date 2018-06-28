@@ -2,14 +2,32 @@
     box-sizing: border-box;
 }
 
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
 .images {
     border: 1px dashed red;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    margin: 20px;
 }
 
 .modal-container {
     border: 1px dashed green;
     width: 550px;
     height: 550px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .close {
