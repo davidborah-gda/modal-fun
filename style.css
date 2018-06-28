@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+.images {
+    border: 1px dashed red;
+}
+
+.modal-container {
+    border: 1px dashed green;
+    width: 550px;
+    height: 550px;
+}
+
+.close {
+    font-size: 2rem;
+    position: absolute;
+    left: 512px;
+    top: 12px;
+    cursor: pointer;
+}
