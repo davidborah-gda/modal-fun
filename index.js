@@ -34,9 +34,11 @@ const modal = {
   render() {
     if (this.isHidden) {
       this.modalContainer.classList.add('hidden');
+      document.getElementById('overlay').style.display = 'none';
     } else {
       this.modalContainer.classList.remove('hidden');
       this.modalImage.src = this.selectedImage;
+      document.getElementById('overlay').style.display = 'block';
     }
   },
 };
