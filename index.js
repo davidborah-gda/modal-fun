@@ -11,9 +11,11 @@ const modal = {
     this.closeBtn = document.querySelector('.close');
     this.modalImage = document.querySelector('.modal-image');
     this.thumbnails = document.querySelectorAll('.thumbnail');
+    this.overlay = document.querySelector('.overlay');
   },
   bindEventListeners() {
     this.closeBtn.addEventListener('click', this.hideModal.bind(this));
+    this.overlay.addEventListener('click', this.hideModal.bind(this));
     this.thumbnails.forEach((thumbnail) => {
       thumbnail.addEventListener('click', this.showModal.bind(this));
     });
@@ -34,11 +36,11 @@ const modal = {
   render() {
     if (this.isHidden) {
       this.modalContainer.classList.add('hidden');
-      document.getElementById('overlay').style.display = 'none';
+      this.overlay.classList.add('hidden');
     } else {
       this.modalContainer.classList.remove('hidden');
       this.modalImage.src = this.selectedImage;
-      document.getElementById('overlay').style.display = 'block';
+      this.overlay.classList.remove('hidden');
     }
   },
 };

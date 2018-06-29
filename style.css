@@ -43,9 +43,8 @@
     cursor: pointer;
 }
 
-#overlay {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
+.overlay {
+    position: absolute; /* Sit on top of the page content */
     width: 100%; /* Full width (cover the whole page) */
     height: 100%; /* Full height (cover the whole page) */
     top: 0; 
